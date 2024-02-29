@@ -14,12 +14,12 @@ pipeline {
             steps{
                 sh "pwd"
                 sh "ls"
-                sh "docker build -t cjfitzy89/task1 . || true"
+                sh "docker build -t haywirehayden/jenkinstest . || true"
             }
         }
         stage ("Run Container"){
             steps{
-                sh "docker run -d -p 80:5500 --name test cjfitzy89/task1 || true"
+                sh "docker run -d -p 80:5500 --name test haywirehayden/jenkinstest || true"
             }
         }
     }
